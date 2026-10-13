@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="violet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Chatbox</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="chat">
+
+    <!-- Header: bot name, theme picker, clear button -->
+    <header class="chat-head">
+      <div class="avatar" aria-hidden="true">B</div>
+      <div class="who">
+        <strong>Chatter Box</strong>
+        <span>Replies with preset answers</span>
+      </div>
+
+      <div class="themes" role="group" aria-label="Color theme">
+        <button class="theme-dot" data-theme-btn="violet" aria-label="Violet theme"></button>
+        <button class="theme-dot" data-theme-btn="ocean" aria-label="Ocean theme"></button>
+        <button class="theme-dot" data-theme-btn="sunset" aria-label="Sunset theme"></button>
+      </div>
+
+      <button class="head-btn" id="clearBtn" type="button">Clear</button>
+    </header>
+
+    <!-- All messages are added here by script.js -->
+    <section class="messages" id="messages" aria-live="polite" aria-label="Conversation"></section>
+
+    <!-- Input area -->
+    <div class="composer">
+      <input id="input" type="text" placeholder="Type a message" autocomplete="off" aria-label="Message">
+      <button id="sendBtn" type="button" disabled>Send</button>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
